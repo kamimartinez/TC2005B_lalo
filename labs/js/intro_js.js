@@ -12,3 +12,9 @@ var comestible = "espinaca"; // variabale global, sigue existiendo, seguridad im
 let flor = "rosa"; // forma moderna de declarar variables
 
 const precio = 99.99;
+
+let numero = parseInt(prompt("Ingresa un numero"));
+
+if (numero > 0) {
+  document.write("<tr><th>Número</th><th>Cuadrado</th><th>Cubo</th></tr>");
+}
