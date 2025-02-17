@@ -5,6 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Material Design</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic" />
+    <style> 
+      body {
+        margin: 5em;
+        max-width: 50em;
+        font-family: Roboto, Helvetica, Arial;
+        line-height: 1.5;
+        padding: 4em 1 em;
+        background-color: grey;
+        color: rgba(240, 238, 238, 0.889);
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <h1>Material Design</h1>
+    <p>
+      Material Design es un sistema de diseño visual creado por Google que busca crear interfaces consistentes y agradables. Se basa en principios como el uso de sombras y capas para dar sensación de profundidad, una tipografía clara (principalmente Roboto), y una paleta de colores vibrante y bien definida.
+
+Incluye animaciones suaves, un sistema de cuadrícula flexible y componentes reutilizables como botones, tarjetas y barras de navegación. Está enfocado en la adaptabilidad a diferentes tamaños de pantalla y en la interacción táctil. Todo esto tiene como objetivo ofrecer una experiencia de usuario fluida y coherente en diversas plataformas y dispositivos. (Material Design, n.d.)
+    </p>
+
+    <h3> Fuentes</h3>
+    <p>Material Design. (n.d.). Get started with Modern UI design - Material Design 3. https://m3.material.io/get-started</p>
+
+    <h2>Framework a utilizar es Picnic</h2>
+    <label>
+      <input type="checkbox" />
+      <span class="checkable">Nuevo Framework aprendido</span>
+    </label>
+  </br>
+
+    <label for="modal_1" class="button" >Ejemplo de Modal</label>
+
+    <div class="modal">
+      <input id="modal_1" type="checkbox" />
+      <label for="modal_1" class="overlay"></label>
+      <article>
+        <header>
+          <h3 style="color: black;">Practica</h3>
+          <label for="modal_1" class="close" style="color: black;">&times;</label>
+        </header>
+        <section class="content" style="color: black;">Nunca habia visto algo asi...</section>
+        <footer>
+          <a
+            class="button"
+            href="C:\Users\Kamila\Desktop\TC2005B_lalo\labs\lab04_js\problema06\index.html"
+            >Chivisimo</a
+          >
+          <label for="modal_1" class="button dangerous"> Cancelar </label>
+        </footer>
+      </article>
+    </div>
+  </body>
 </html>
