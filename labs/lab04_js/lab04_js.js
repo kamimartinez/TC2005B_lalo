@@ -43,6 +43,11 @@ let pos = 0;
 let ceros = 0;
 
 function contador(a) {
+  document.write("<table>");
+  for (let i = 0; i < a.length; i++) {
+    document.write("<td>" + a[i] + "</td>");
+  }
+  document.write("</table>");
   for (let i = 0; i <= a.length; i++) {
     if (a[i] == 0) ceros++;
     if (a[i] < 0) neg++;
@@ -63,8 +68,20 @@ const matrix = [
   [4, 5, 6],
   [7, 8, 9],
 ];
+document.write("PROMEDIO MATRIZ");
 function promedio(matrix) {
   const promedios = [];
+  document.write("<table>");
+  for (let i = 0; i < matrix.length; i++) {
+    document.write("<tr>");
+    for (let j = 0; j < matrix[i].length; j++) {
+      document.write("<td>" + matrix[i][j] + "</td>");
+    }
+    document.write("</tr>");
+  }
+  document.write("</table>");
+  document.write("<br />");
+
   for (let i = 0; i < matrix.length; i++) {
     let fila = matrix[i];
     let sfila = 0;
@@ -99,7 +116,3 @@ function inverso(num) {
 }
 
 document.write("El inverso de " + num + " es " + inverso(num));
-
-// PROBLEMA 6
-
-

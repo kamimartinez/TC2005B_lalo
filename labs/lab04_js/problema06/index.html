@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problema 6</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Gestor de Gastos</h1>
+    <div class="container">
+      <h1>Gestor de Gastos</h1>
+      <p>Permite agregar gastos de una persona.</p>
+
+      <div class="input-group">
+        <input type="text" id="expenseName" placeholder="Gasto" />
+        <input
+          type="number"
+          id="expenseAmount"
+          placeholder="Cantidad"
+          min="0"
+          step="0.01"
+        />
+        <select id="expenseCategory">
+          <option value="1">Necesario</option>
+          <option value="2">Opcional</option>
+          <option value="3">Lujo</option>
+        </select>
+        <button onclick="addExpense()">Agregar Gasto</button>
+      </div>
+
+      <h2>Lista de Gastos</h2>
+      <div id="expenseList" class="expense-list"></div>
+    </div>
+    <div class="container">
+      <table>
+        <tr>
+          <th>Pregunta</th>
+          <th>Respuesta</th>
+        </tr>
+        <tr>
+          <td>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</td>
+          <td>
+            <strong>Diferencias:</strong><br />
+            - Java es un lenguaje compilado, mientras que JavaScript es
+            interpretado.<br />
+            - Java se usa principalmente para aplicaciones de escritorio y
+            móviles, mientras que JavaScript se usa en desarrollo web.<br />
+            - Java requiere un entorno de ejecución (JVM), mientras que
+            JavaScript se ejecuta en navegadores.<br />
+            <strong>Semejanzas:</strong><br />
+            - Ambos tienen una sintaxis similar en ciertos aspectos.<br />
+            - Ambos pueden usarse en desarrollo web (Java en backend, JavaScript
+            en frontend y backend con Node.js).
+          </td>
+        </tr>
+        <tr>
+          <td>¿Qué métodos tiene el objeto Date? (Menciona al menos 5)</td>
+          <td>
+            - getFullYear()<br />
+            - getMonth()<br />
+            - getDate()<br />
+            - getHours()<br />
+            - getMinutes()
+          </td>
+        </tr>
+        <tr>
+          <td>¿Qué métodos tienen los arreglos? (Menciona al menos 5)</td>
+          <td>
+            - push()<br />
+            - pop()<br />
+            - shift()<br />
+            - unshift()<br />
+            - map()
+          </td>
+        </tr>
+        <tr>
+          <td>
+            ¿Cómo se declara una variable con alcance local dentro de una
+            función?
+          </td>
+          <td>
+            Se usa <code>let</code> o <code>const</code> dentro de la función,
+            por ejemplo:<br />
+            <code>function ejemplo() { let x = 10; }</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            ¿Qué implicaciones tiene utilizar variables globales dentro de
+            funciones?
+          </td>
+          <td>
+            - Puede provocar efectos secundarios si la variable es modificada
+            accidentalmente.<br />
+            - Dificulta la depuración y mantenimiento del código.<br />
+            - Puede generar conflictos de nombres en programas grandes.<br />
+            - Reduce la modularidad y reutilización del código.
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
