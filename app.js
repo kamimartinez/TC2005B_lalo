@@ -9,3 +9,14 @@ for (let item of arreglo) {
     console.log(item);
   }, item);
 }
+
+const http = require("http");
+
+const server = http.createServer((request, response) => {
+  console.log(request.url); // estoy imprimiendo la url que esta pidienda la petición
+  response.setHeader("Content-Type", "text/html"); // mandamos html como respuesta
+  response.write("<h2> Hola </h2>");
+  response.end();
+});
+
+server.listen(3000);
