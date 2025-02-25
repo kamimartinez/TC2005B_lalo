@@ -123,7 +123,13 @@ app.use((request, response, next) => {
   next();
 });
 
+// app.get es para registrar un middleware para peticiones HTTP GET
 app.get("/plantas/agregar", (request, response, next) => {
+  response.send(html_header + html_form + html_footer);
+});
+
+// app.post es para registrar un middleware para peticiones HTTP POST
+app.post("/plantas/agregar", (request, response, next) => {
   response.send(html_header + html_form + html_footer);
 });
 
