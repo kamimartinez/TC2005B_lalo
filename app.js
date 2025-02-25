@@ -123,7 +123,7 @@ app.use((request, response, next) => {
   next();
 });
 
-app.use("/plantas/agregar", (request, response, next) => {
+app.get("/plantas/agregar", (request, response, next) => {
   response.send(html_header + html_form + html_footer);
 });
 
