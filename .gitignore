@@ -1,4 +1,4 @@
-node_molecules/
+node_modules/
 dist/
 
 *.class
