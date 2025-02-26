@@ -1,0 +1,27 @@
+{
+  "name": "tc2005b_lalo",
+  "version": "1.0.0",
+  "description": "Practicas clase TC2005B Contrucción de Software y Toma de Decisiones",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamimartinez/TC2005B_lalo.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kamimartinez/TC2005B_lalo/issues"
+  },
+  "homepage": "https://github.com/kamimartinez/TC2005B_lalo#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2"
+  }
+}
