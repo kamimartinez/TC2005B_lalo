@@ -32,12 +32,16 @@ const html_header = `
       
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
-            <a class="navbar-item">
+            <a href="/" class="navbar-item">
               Home
             </a>
       
-            <a class="navbar-item">
-              Documentation
+            <a href="/plantas/agregar" class="navbar-item">
+              Agregar planta
+            </a>
+
+            <a href="/plantas/regar" class="navbar-item">
+              Regar plantas
             </a>
       
             <div class="navbar-item has-dropdown is-hoverable">
@@ -143,6 +147,13 @@ router.post("/agregar", (request, response, next) => {
   html += `</div>`;
   html += html_footer;
   response.send(html);
+});
+
+const path = require("path");
+
+router.get("/regar", (request, response, next) => {
+  //response.sendFile("../views/index.html");
+  response.sendFile(path.join(__dirname, "..", "views", "index.html"));
 });
 
 module.exports = router;

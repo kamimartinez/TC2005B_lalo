@@ -7,7 +7,7 @@ if (!isNaN(numero)) {
 
   for (let i = 1; i <= numero; i++) {
     document.write(
-      `<tr> <td>${i}</td> <td>${i ** 2}</td> <td>${i ** 3}</td> </tr>`
+      `<tr> <td>${i}</td> <td>${i ** 2}</td> <td>${i ** 3}</td> </tr>`,
     );
   }
   document.write("</table>");
@@ -27,7 +27,7 @@ let tt = (tF - tB) / 1000;
 document.write("<br />");
 
 document.write(
-  "El usuario se tardo " + tt + " segundos en contestar la pregunta de suma."
+  "El usuario se tardo " + tt + " segundos en contestar la pregunta de suma.",
 );
 if (suma === num1 + num2) {
   document.write("<h1> Respuesta correcta </h1>");
