@@ -1,12 +1,6 @@
 const express = require("express");
 const app = express();
 
-const path = require("path");
-app.use(express.static(path.join(__dirname, "public")));
-
-app.set("view engine", "ejs");
-app.set("views", "views");
-
 const bodyParser = require("body-parser");
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -19,17 +13,17 @@ app.use((request, response, next) => {
   next();
 });
 
-const plantasRoutes = require("./routes/plantas.routes");
+const registroRoutes = require("./routes/registro.routes");
 
-app.use("/plantas", plantasRoutes);
-app.use("/plants", plantasRoutes);
+const preguntasRoutes = require("./routes/preguntas.routes");
+
+app.use("/", registroRoutes);
+
+app.use("/", preguntasRoutes);
 
 app.use((request, response, next) => {
-  console.log("Otro middleware!");
-
-  //Manda la respuesta
-  response.send("No se encuentra el recurso que estas buscando");
-  response.statusCode = 404;
+  console.log("ERROR");
+  response.status(404).send("ERROR! hola mundo lol");
 });
 
 app.listen(3000);
