@@ -32,9 +32,14 @@
             </a>
             
             <% if (isLoggedIn) { %>
-            <a href="/plantas/agregar" class="navbar-item">
-              Agregar planta
-            </a>
+            
+              <% for (let privilegio of privilegios) { %>
+                <% if(privilegio.nombre == "agregar plantas") { %>
+                  <a href="/plantas/agregar" class="navbar-item">
+                    Agregar planta
+                  </a>
+                <% } %>
+              <% } %>
 
             <a href="/plantas/regar" class="navbar-item">
               Regar plantas

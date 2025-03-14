@@ -1,12 +1,20 @@
-const Planta = require('../models/planta.model');
+const Plantas = require('../models/planta.model');
+const Jardin = require('../models/jardin.model');
 
 exports.get_agregar = (request, response, next) => {
     console.log(request.session.username);
-    response.render('agregar_planta', {
-        isLoggedIn: request.session.isLoggedIn || false,
-        username: request.session.username || '',
-        csrfToken: request.csrfToken(),
+    Plantas.fetchAll().then(([plantas, fieldData]) => {
+        response.render('agregar_planta', {
+            isLoggedIn: request.session.isLoggedIn || false,
+            username: request.session.username || '',
+            csrfToken: request.csrfToken(),
+            privilegios : request.session.privilegios || false,
+            plantas: plantas, 
+        });
+    }).catch((error) => {
+        console.log(error);
     });
+    
 };
 
 exports.post_agregar = (request, response, next) => {
@@ -29,7 +37,7 @@ exports.get_root = (request, response, next) => {
         request.session.info = '';
     }
 
-    Planta.fetch(request.params.id)
+    Jardin.fetchAll(request.session.user_id)
         .then(([rows, fieldData]) => {
             console.log(fieldData);
             console.log(rows);
@@ -38,6 +46,7 @@ exports.get_root = (request, response, next) => {
                 username: request.session.username || '',
                 plantas: rows,
                 info: mensaje,
+                privilegios : request.session.privilegios || false,
             });
         }).catch((error) => {
             console.log(error);
