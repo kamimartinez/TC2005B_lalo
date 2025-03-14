@@ -1,0 +1,23 @@
+<%- include('includes/_header') %>
+
+<% if(info != '') { %>
+    <div class = "notification is-info" >
+        <%= info %>
+    </div>
+<% } %>
+
+<div class="columns">
+<% for(let planta of plantas) { %>
+    <div class="column">
+        <div class="card">
+            <div class="card-content">
+                <div class="content">
+                    <%= planta.nombre %>
+                </div>
+            </div>
+        </div>
+    </div>
+<% } %>
+</div>
+
+<%- include('includes/_footer') %>
