@@ -10,7 +10,7 @@ module.exports = class Usuario {
     save() {
         return bcrypt.hash(this.password, 12).then((password_cifrado) => {
             return db.execute(
-                'INSERT INTO usuarios(username, password) VALUES (?, ?)', 
+                'CALL insertUser(?, ?)', 
                 [this.username, password_cifrado]
                 );
         }).catch((error) => {

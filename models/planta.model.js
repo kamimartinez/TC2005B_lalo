@@ -9,7 +9,7 @@ module.exports = class Planta {
 
     //Este método servirá para guardar de manera persistente el nuevo objeto. 
     save() {
-        return db.execute('INSERT INTO plantas(nombre) VALUES (?)', [this.nombre]);
+        return db.execute('CALL registraPlanta(?)', [this.nombre]);
     }
 
     //Este método servirá para devolver los objetos del almacenamiento persistente.
